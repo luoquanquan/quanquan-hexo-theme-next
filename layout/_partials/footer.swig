@@ -46,38 +46,25 @@
 
 {%- if theme.footer.powered.enable %}
   <div class="powered-by">
-    <i class="fa fa-desktop" aria-hidden="true"></i><span id="busuanzi_container_site_uv">
-      本站总访问量:<span id="busuanzi_value_site_pv"></span>
-    </span>
-    <i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_container_site_uv">
-      本站访客数:<span id="busuanzi_value_site_uv"></span>
-    </span>
-    <i class="fa fa-eye" aria-hidden="true"></i><span id="busuanzi_container_site_uv">
-      本文总阅读量:<span id="busuanzi_value_page_pv"></span>
-    </span>
-    <!--
-      {{- __('footer.powered', next_url('https://hexo.io', 'Hexo', {class: 'theme-link'})) }}
-      {%- if theme.footer.powered.version %} v{{ hexo_version }}{%- endif %}
-    -->
+    {{- __('footer.powered', next_url('https://hexo.io', 'Hexo', {class: 'theme-link'})) }}
+    {%- if theme.footer.powered.version %} v{{ hexo_version }}{%- endif %}
   </div>
 {%- endif %}
 
-<!--
-  {%- if theme.footer.powered.enable and theme.footer.theme.enable %}
-    <span class="post-meta-divider">|</span>
-  {%- endif %}
+{%- if theme.footer.powered.enable and theme.footer.theme.enable %}
+  <span class="post-meta-divider">|</span>
+{%- endif %}
 
-  {%- if theme.footer.theme.enable %}
-    <div class="theme-info">
-      {%- set next_site = 'https://theme-next.org' %}
-      {%- if theme.scheme !== 'Gemini' %}
-        {%- set next_site = 'https://' + theme.scheme | lower + '.theme-next.org' %}
-      {%- endif %}
-      {{- __('footer.theme') }} – {{ next_url(next_site, 'NexT.' + theme.scheme, {class: 'theme-link'}) }}
-      {%- if theme.footer.theme.version %} v{{ next_version }}{%- endif %}
-    </div>
-  {%- endif %}
--->
+{%- if theme.footer.theme.enable %}
+  <div class="theme-info">
+    {%- set next_site = 'https://theme-next.org' %}
+    {%- if theme.scheme !== 'Gemini' %}
+      {%- set next_site = 'https://' + theme.scheme | lower + '.theme-next.org' %}
+    {%- endif %}
+    {{- __('footer.theme') }} – {{ next_url(next_site, 'NexT.' + theme.scheme, {class: 'theme-link'}) }}
+    {%- if theme.footer.theme.version %} v{{ next_version }}{%- endif %}
+  </div>
+{%- endif %}
 
 {%- if theme.add_this_id %}
   <div class="addthis_inline_share_toolbox">
