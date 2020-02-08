@@ -184,7 +184,8 @@ social:
   掘金: https://juejin.im/user/5837c2bd61ff4b006ca8d1b2 || stack-overflow
   GitHub: https://github.com/luoquanquan || github
   E-Mail: mailto:luo_quanquan@163.com || envelope
-  Weibo: https://www.weibo.com/u/7106820488|| weibo
+  # Weibo: https://www.weibo.com/u/7106820488|| weibo
+  RSS: /atom.xml || rss
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
@@ -192,7 +193,6 @@ social:
   #YouTube: https://youtube.com/yourname || youtube
   #Instagram: https://instagram.com/yourname || instagram
   #Skype: skype:yourname?call|chat || skype
-  #RSS: /atom.xml || rss
 
 social_icons:
   enable: true
