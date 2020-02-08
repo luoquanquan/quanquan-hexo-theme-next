@@ -10,6 +10,8 @@
   </div>
 {%- endif %}
 
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
 <div class="copyright">
   {% set copyright_year = date(null, 'YYYY') %}
   &copy; {% if theme.footer.since and theme.footer.since != copyright_year %}{{ theme.footer.since }} – {% endif %}
@@ -44,6 +46,15 @@
 
 {%- if theme.footer.powered.enable %}
   <div class="powered-by">
+    <i class="fa fa-desktop" aria-hidden="true"></i><span id="busuanzi_container_site_uv">
+      本站总访问量:<span id="busuanzi_value_site_pv"></span>
+    </span>
+    <i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_container_site_uv">
+      本站访客数:<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <i class="fa fa-eye" aria-hidden="true"></i><span id="busuanzi_container_site_uv">
+      本文总阅读量:<span id="busuanzi_value_page_pv"></span>
+    </span>
     {{- __('footer.powered', next_url('https://hexo.io', 'Hexo', {class: 'theme-link'})) }}
     {%- if theme.footer.powered.version %} v{{ hexo_version }}{%- endif %}
   </div>
